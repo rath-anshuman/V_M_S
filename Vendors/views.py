@@ -2,19 +2,17 @@ from .models import Vendors,PerformanceMetrics
 from Purchase_Orders.models import PurchaseOrder 
 from Purchase_Orders.serialization import PurchaseOrderSerializer 
 from .serialization import VendorsSerializer,PerformanceMetricsSerializer
-from rest_framework.decorators import api_view,permission_classes
+from rest_framework.decorators import api_view
 from rest_framework import viewsets
 from rest_framework import status
 from rest_framework.response import Response
 
 from django.db.models import Sum,Avg,F,ExpressionWrapper,DurationField
 from django.shortcuts import get_object_or_404
-from rest_framework.permissions import IsAuthenticated
 
 class VendorsViewSet(viewsets.ModelViewSet):
     queryset=Vendors.objects.all()
     serializer_class=VendorsSerializer
-    permission_classes = [IsAuthenticated]
 
 
 

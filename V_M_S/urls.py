@@ -12,11 +12,11 @@ venrouter=DefaultRouter()
 venrouter.register('vendors',VendorsViewSet,basename='vendors')
 venrouter.register('purchase_orders',PurchaseOrdersViewSet,basename='purchase_orders')
 
+from .views import home
+
 urlpatterns = [
+    path('', home),
     path('admin/', admin.site.urls),
     path('api/', include(venrouter.urls)),
     path('api/vendors/<int:vendor_id>/performance', vendor_performance, name='vendor-performance'),
-    # path('api/purchase_orders/<int:pk>/acknowledge/',acknowledge_purchase_order, name='acknowledge_purchase_order'),
-
-
 ]

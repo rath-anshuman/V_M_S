@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>API Endpoint Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>API Endpoint Information</h1>
+
+        <h2>Vendors</h2>
+        <ul>
+            <li><strong>POST /api/vendors/</strong>: Create a new vendor.</li>
+            <li><strong>GET /api/vendors/</strong>: List all vendors.</li>
+            <li><strong>GET /api/vendors/{vendor_id}/</strong>: Retrieve a specific vendor's details.</li>
+            <li><strong>PUT /api/vendors/{vendor_id}/</strong>: Update a vendor's details.</li>
+            <li><strong>DELETE /api/vendors/{vendor_id}/</strong>: Delete a vendor.</li>
+        </ul>
+
+        <h2>Purchase Order Tracking</h2>
+        <ul>
+            <li><strong>POST /api/purchase_orders/</strong>: Create a purchase order.</li>
+            <li><strong>GET /api/purchase_orders/</strong>: List all purchase orders with an option to filter by vendor.
+            </li>
+            <li><strong>GET /api/purchase_orders/{po_id}/</strong>: Retrieve details of a specific purchase order.</li>
+            <li><strong>PUT /api/purchase_orders/{po_id}/</strong>: Update a purchase order.</li>
+            <li><strong>DELETE /api/purchase_orders/{po_id}/</strong>: Delete a purchase order.</li>
+        </ul>
+
+        <h2>Using the URL Bar</h2>
+        <p>To interact with the API endpoints using the URL bar:</p>
+        <ul>
+            <li>Simply enter the desired endpoint along with any necessary parameters.</li>
+            <li>For example, to retrieve details of a specific vendor, enter <code>/api/vendors/{vendor_id}/</code>
+                where <code>{vendor_id}</code> is the ID of the vendor.</li>
+            <li>Similarly, to update a purchase order, enter <code>/api/purchase_orders/{po_id}/</code> where
+                <code>{po_id}</code> is the ID of the purchase order.</li>
+        </ul>
+
+        <h1>API Testing with Postman and Thunder Client</h1>
+
+        <h2>Postman:</h2>
+        <ol>
+            <li><strong>Install Postman:</strong> Download and install Postman from the <a
+                    href="https://www.postman.com/downloads/">official website</a>.</li>
+            <li>
+                <strong>Create a Request:</strong>
+                <ul>
+                    <li>Open Postman and click on the "New" button to create a new request.</li>
+                    <li>Choose the HTTP method (GET, POST, PUT, DELETE, etc.) from the dropdown menu.</li>
+                    <li>Enter the request URL in the address bar.</li>
+                    <li>Add headers, parameters, request body (if applicable), and any other required information.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Send the Request:</strong>
+                <ul>
+                    <li>Click on the "Send" button to send the request.</li>
+                    <li>Postman will display the response, including status code, headers, and body.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Test Different Scenarios:</strong>
+                <ul>
+                    <li>Utilize Postman's features like environments, variables, and collections to organize and
+                        streamline your testing process.</li>
+                    <li>Test different scenarios by modifying request parameters, headers, or body.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2>Thunder Client (VS Code Extension):</h2>
+        <ol>
+            <li><strong>Install Thunder Client:</strong> If you're using Visual Studio Code, you can install the Thunder
+                Client extension from the <a
+                    href="https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client">VS Code
+                    Marketplace</a>.</li>
+            <li>
+                <strong>Create a Request:</strong>
+                <ul>
+                    <li>Open Thunder Client from the sidebar.</li>
+                    <li>Click on the "New Request" button.</li>
+                    <li>Enter the request URL and choose the HTTP method.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Send the Request:</strong>
+                <ul>
+                    <li>Click on the "Send Request" button to send the request.</li>
+                    <li>Thunder Client will display the response in a separate pane.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>View Response:</strong>
+                <ul>
+                    <li>Thunder Client provides options to view the response in different formats (Raw, Pretty, Parsed).
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>Test Different Scenarios:</strong>
+                <ul>
+                    <li>Similar to Postman, you can test different scenarios by modifying request parameters, headers,
+                        or body directly in Thunder Client.</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>
