@@ -26,6 +26,7 @@ To run this system locally, follow these steps:
 - **GET /api/vendors/{vendor_id}/**: Retrieve a specific vendor's details.
 - **PUT /api/vendors/{vendor_id}/**: Update a vendor's details.
 - **DELETE /api/vendors/{vendor_id}/**: Delete a vendor.
+- **GET /api/vendors/{vendor_id}/performance/:** calculated performance metrics
 
 ### Purchase Order Tracking
 
@@ -36,6 +37,8 @@ To run this system locally, follow these steps:
 - **GET /api/purchase_orders/{po_id}/**: Retrieve details of a specific purchase order.
 - **PUT /api/purchase_orders/{po_id}/**: Update a purchase order.
 - **DELETE /api/purchase_orders/{po_id}/**: Delete a purchase order.
+- **POST /api/purchase_orders/{po_id}/acknowledge/:** vendors to acknowledge
+  POs.
 
 ### Vendor Performance Evaluation
 
